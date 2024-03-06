@@ -38,9 +38,9 @@
 .sign-up-form__bonus-text-accent {
   margin-bottom: to-rem(10);
   font-size: to-rem(48);
-  color: rgba(0, 0, 0, 0.8);
-  -webkit-text-stroke: to-rem(3) #fedf00;
-  text-shadow: 0 to-rem(4) to-rem(8) rgba(254, 223, 0, 0.5);
+  color: rgba(var(--col-total-black-rgb), 80%);
+  -webkit-text-stroke: to-rem(3) var(--col-tibetan-yellow);
+  text-shadow: 0 to-rem(4) to-rem(8) rgba(var(--col-tibetan-yellow-rgb), 50%);
 
   @include respond-above(tablet) {
     font-size: to-rem(64);

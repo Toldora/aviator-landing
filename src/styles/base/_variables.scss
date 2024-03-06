@@ -24,6 +24,9 @@
   --col-dark-tone-ink: #{$col-dark-tone-ink};
   --col-dark-tone-ink-rgb: #{$col-dark-tone-ink-rgb};
   --col-black-chestnut-oak: #{$col-black-chestnut-oak};
+  --col-love-red: #{$col-love-red};
+  --col-hornet-sting: #{$col-hornet-sting};
+  --col-bubbelgum-heart: #{$col-bubbelgum-heart};
 
   // Z-indexes
   --z-modal-overlay: 14;
@@ -83,7 +86,7 @@
   --scrollbar-color: var(--primary-text-color);
 
   // App overlay
-  --app-overlay-bg: rgba(var(--col-dark-tone-ink-rgb), 45%);
+  --app-overlay-bg: rgba(var(--col-dark-tone-ink-rgb), 60%);
 
   // Auth type radio
   --auth-type-radio-bg-hover: rgba(var(--col-total-white-rgb), 15%);
