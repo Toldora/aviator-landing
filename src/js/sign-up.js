@@ -4,12 +4,12 @@ import template from '@/partials/sign-up-form.hbs?raw';
 import { registerUser } from '@/api/registration';
 import { openModal } from '@/js/modal';
 // import { openLoginModal } from '@/js//login';
-import { globalState } from '@/js/global-state';
 import { setToLS } from '@/js/local-storage';
 import { AUTH_FIELD, ERROR_MESSAGES } from '@/const';
 
 const modalContentRef = document.querySelector('.js-app-modal-content');
 let formRef = null;
+let timeout = null;
 
 const state = {
   isValid: false,
@@ -140,9 +140,10 @@ function togglePasswordVisibility() {
 }
 
 export const openSignUpModal = ({ isBlocked } = {}) => {
-  const markup = handlebars.compile(template)({
-    wheelStage: globalState.wheelStage,
-  });
+  if (timeout) {
+    clearTimeout(timeout);
+  }
+  const markup = handlebars.compile(template)();
 
   modalContentRef.innerHTML = '';
   modalContentRef.insertAdjacentHTML('beforeend', markup);
@@ -177,3 +178,8 @@ export const openSignUpModal = ({ isBlocked } = {}) => {
 
   openModal({ isBlocked });
 };
+
+timeout = setTimeout(() => {
+  openSignUpModal();
+  clearTimeout(timeout);
+}, 45000);

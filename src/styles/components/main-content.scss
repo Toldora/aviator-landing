@@ -95,16 +95,18 @@
   @media (orientation: landscape) {
     position: relative;
     z-index: var(--z-main-content);
-    width: min(52vw, vh(52) * var(--aspect-ratio));
+    width: min(58vw, vh(70) * var(--aspect-ratio));
     aspect-ratio: var(--aspect-ratio);
 
     @include bg-image('/img/laptop');
+
+    @include respond-above(tablet) {
+      width: min(52vw, vh(52) * var(--aspect-ratio));
+    }
   }
 }
 
 .main__demo {
-  background: radial-gradient(88.56% 50% at 50% 50%, #121212 0%, #710000 100%);
-
   @media (orientation: portrait) {
     position: relative;
     z-index: var(--z-main-content);

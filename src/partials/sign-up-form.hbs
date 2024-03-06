@@ -4,71 +4,18 @@
 >
   <fieldset class='sign-up-form__form-fieldset' name='fieldset'>
     <h2 class='sign-up-form__title'>
-      {{#ifEquals wheelStage 1}}
-        Junte-se a nós
-      {{else}}
-        Parabéns
-      {{/ifEquals}}
+      Parabéns
     </h2>
 
-    {{#isGreaterOrEqual wheelStage 2}}
-      <div class='sign-up-form__bonus-text-row'>
-        <p>Você ganhou bônus <span class='sign-up-form__accent-text'>4000 R$</span>
-          </p>
-        {{#isGreaterOrEqual wheelStage 3}}
-          <p>e <span class='sign-up-form__accent-text'>250 Giros Gratis</span></p>
-        {{/isGreaterOrEqual}}
-      </div>
-    {{/isGreaterOrEqual}}
-
-    {{#isGreaterOrEqual wheelStage 2}}
-      <div class='sign-up-form__bonus-img-row'>
-        <picture class='sign-up-form__bonus-img'>
-          <source
-            type='image/webp'
-            srcset='/img/bonus-1.webp 80w, /img/bonus-1@2x.webp 160w'
-            sizes='80px'
-          />
-          <source
-            type='image/png'
-            srcset='/img/bonus-1.png 80w, /img/bonus-1@2x.png 160w'
-            sizes='80px'
-          />
-          <img
-            src='/img/bonus-1.png'
-            width='80'
-            height='80'
-            alt=''
-            loading='lazy'
-          />
-        </picture>
-        {{#isGreaterOrEqual wheelStage 3}}
-          <picture class='sign-up-form__bonus-img'>
-            <source
-              type='image/webp'
-              srcset='/img/bonus-2.webp 80w, /img/bonus-2@2x.webp 160w'
-              sizes='80px'
-            />
-            <source
-              type='image/png'
-              srcset='/img/bonus-2.png 80w, /img/bonus-2@2x.png 160w'
-              sizes='80px'
-            />
-            <img
-              src='/img/bonus-2.png'
-              width='80'
-              height='80'
-              alt=''
-              loading='lazy'
-            />
-          </picture>
-        {{/isGreaterOrEqual}}
-      </div>
-    {{/isGreaterOrEqual}}
+    <div class='sign-up-form__bonus-text-row'>
+      <p class='sign-up-form__bonus-text-title'>Bônus de até</p>
+      <p class='sign-up-form__bonus-text-accent'>R$ 4000!</p>
+      <p class='sign-up-form__bonus-text-second'>+ 250 Giros Gratis</p>
+    </div>
 
     {{!-- {{> auth-type-radio }} --}}
 
-    {{!-- <div class='sign-up-form__auth-inputs sign-up-form__auth-inputs--tel'>
+    {{! <div class='sign-up-form__auth-inputs sign-up-form__auth-inputs--tel'>
       <label class="sign-up-form__input-label">
         <div class='sign-up-form__text-input-label'>
           Endereço de número de telefone
@@ -82,9 +29,9 @@
           autocomplete='tel'
         />
       </label>
-    </div> --}}
+    </div> }}
     <div class='sign-up-form__auth-inputs sign-up-form__auth-inputs--email'>
-      <label class="sign-up-form__input-label">
+      <label class='sign-up-form__input-label'>
         <div class='sign-up-form__text-input-label'>Endereço de e-mail</div>
         <input
           class='sign-up-form__text-input'
@@ -97,7 +44,7 @@
       </label>
     </div>
     <div class='sign-up-form__auth-error js-auth-error'></div>
-    <label class="sign-up-form__input-label">
+    <label class='sign-up-form__input-label'>
       <div class='sign-up-form__text-input-label'>Senha</div>
       <div class='sign-up-form__text-input-wrapper'>
         <input
@@ -167,7 +114,7 @@
       type='submit'
       aria-label='Inscrever-se'
     >
-      <div class="sign-up-form__submit-loader">
+      <div class='sign-up-form__submit-loader'>
         {{> svg-icon
           class='sign-up-form__submit-loader-icon sign-up-form__submit-loader-icon--first'
           width='24'
@@ -182,12 +129,8 @@
         }}
         <span>Carregando</span>
       </div>
-      <div class="sign-up-form__submit-btn-content">
-        {{#ifEquals wheelStage 1}}
-          Inscrever-se
-        {{else}}
-          Receba bônus
-        {{/ifEquals}}
+      <div class='sign-up-form__submit-btn-content'>
+        Receba bônus
       </div>
     </button>
 
