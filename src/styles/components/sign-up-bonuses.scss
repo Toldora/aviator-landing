@@ -1,0 +1,33 @@
+.sign-up-bonuses__bonus-text-row {
+  margin-top: to-rem(10);
+  margin-bottom: to-rem(20);
+  line-height: 1.15;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.sign-up-bonuses__bonus-text-title {
+  font-size: to-rem(24);
+
+  @include respond-above(tablet) {
+    font-size: to-rem(32);
+  }
+}
+
+.sign-up-bonuses__bonus-text-accent {
+  margin-bottom: to-rem(10);
+  font-size: to-rem(48);
+  color: rgba(var(--col-total-black-rgb), 80%);
+  -webkit-text-stroke: to-rem(3) var(--col-tibetan-yellow);
+  text-shadow: 0 to-rem(4) to-rem(8) rgba(var(--col-tibetan-yellow-rgb), 50%);
+
+  @include respond-above(tablet) {
+    font-size: to-rem(64);
+  }
+}
+
+.sign-up-bonuses__bonus-text-second {
+  font-size: to-rem(16);
+  font-weight: 400;
+}
