@@ -18,6 +18,7 @@ export const openSignUpModal = ({ isBlocked } = {}) => {
     bonusesMarkup,
     title: 'Parabéns',
     submitText: 'Receba seu bônus',
+    isEmailOnFirstPosition: true,
   });
 
   modalContentRef.innerHTML = '';
